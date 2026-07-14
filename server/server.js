@@ -1,22 +1,27 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 
 // ================= MIDDLEWARE =================
 
-app.use(cors({
-  origin: "*"
-}));
-app.use(express.json());
-const path = require("path");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
+app.use(express.json());
+
+// Serve uploaded resumes
 app.use(
   "/uploads",
   express.static(path.join(__dirname, "uploads"))
 );
+
 console.log("Loading auth routes...");
 
 // ================= ROUTES =================
@@ -66,7 +71,7 @@ mongoose
     console.log("MongoDB Error:", err);
   });
 
-// ================= START SERVER =================
+// ================= SERVER START =================
 
 const PORT = process.env.PORT || 5000;
 

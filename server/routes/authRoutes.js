@@ -308,7 +308,7 @@ router.post(
 
           {
 
-            resume:req.file.path
+            resume: `/uploads/resume/${req.file.filename}`
 
           },
 
