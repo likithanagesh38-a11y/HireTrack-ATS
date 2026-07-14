@@ -28,7 +28,7 @@ function CreateJob() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/jobs/create",
+        "https://hiretrack-ats.onrender.com/api/jobs/create",
         {
           ...job,
           recruiter: user._id,

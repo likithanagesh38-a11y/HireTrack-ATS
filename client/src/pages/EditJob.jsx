@@ -23,7 +23,7 @@ const EditJob = () => {
   const fetchJob = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/jobs"
+        "https://hiretrack-ats.onrender.com/api/jobs"
       );
 
       const selectedJob = res.data.find(
@@ -60,7 +60,7 @@ const EditJob = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/jobs/${id}`,
+        `https://hiretrack-ats.onrender.com/api/jobs/${id}`,
         job
       );
 

@@ -85,7 +85,7 @@ const fetchApplications = async () => {
   try {
 
     const response = await axios.get(
-  `http://localhost:5000/api/applications/${user._id}`
+  `https://hiretrack-ats.onrender.com/api/applications/${user._id}`
 );
 
     setApplications(response.data);
@@ -122,7 +122,7 @@ const fetchJobs = async () => {
   try {
 
     const response = await axios.get(
-      `http://localhost:5000/api/jobs/recruiter/${user._id}`
+      `https://hiretrack-ats.onrender.com/api/jobs/recruiter/${user._id}`
     );
 
     setJobs(response.data);
@@ -142,7 +142,7 @@ const fetchJobs = async () => {
   const updateStatus = async (id, status) => {
   try {
     await axios.put(
-      `http://localhost:5000/api/applications/status/${id}`,
+      `https://hiretrack-ats.onrender.com/api/applications/status/${id}`,
       {
         status,
       }
@@ -170,7 +170,7 @@ const fetchJobs = async () => {
   try {
 
     const response = await axios.delete(
-      `http://localhost:5000/api/jobs/delete/${jobId}`
+      `https://hiretrack-ats.onrender.com/api/jobs/delete/${jobId}`
     );
 
     toast.success(response.data.message);
@@ -375,7 +375,7 @@ const fetchJobs = async () => {
                 {app.candidate.resume && (
   <p className="mt-2">
     <a
-      href={`http://localhost:5000/${app.candidate.resume}`}
+      href={`https://hiretrack-ats.onrender.com/${app.candidate.resume}`}
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 font-semibold hover:underline"

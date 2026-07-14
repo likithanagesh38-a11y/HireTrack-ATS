@@ -23,7 +23,7 @@ function CandidateDashboard() {
       try {
 
         const response = await axios.get(
-          "http://localhost:5000/api/jobs"
+          "https://hiretrack-ats.onrender.com/api/jobs"
         );
 
         setJobs(response.data);
@@ -52,7 +52,7 @@ function CandidateDashboard() {
       try {
 
         const response = await axios.get(
-          `http://localhost:5000/api/applications/candidate/${userId}`
+          `https://hiretrack-ats.onrender.com/api/applications/candidate/${userId}`
         );
 
         setApplications(response.data);
@@ -93,7 +93,7 @@ function CandidateDashboard() {
 
 
       const response = await axios.post(
-        "http://localhost:5000/api/applications/apply",
+        "https://hiretrack-ats.onrender.com/api/applications/apply",
         {
           candidate: user._id,
           job: jobId,
@@ -108,7 +108,7 @@ function CandidateDashboard() {
 
       // Refresh applications
       const updatedApplications = await axios.get(
-        `http://localhost:5000/api/applications/candidate/${user._id}`
+        `https://hiretrack-ats.onrender.com/api/applications/candidate/${user._id}`
       );
 
 
