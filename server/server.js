@@ -16,7 +16,8 @@ app.use(
 
 app.use(express.json());
 
-// Serve uploaded resumes
+// ================= SERVE UPLOADED FILES =================
+
 app.use(
   "/uploads",
   express.static(path.join(__dirname, "uploads"))
@@ -40,7 +41,7 @@ app.use("/api/applications", applicationRoutes);
 
 console.log("Application route registered");
 
-// ================= HOME ROUTES =================
+// ================= TEST ROUTES =================
 
 app.get("/", (req, res) => {
   res.send("THIS IS MY NEW SERVER - VERSION 2");
@@ -52,12 +53,6 @@ app.get("/hello", (req, res) => {
 
 app.get("/test", (req, res) => {
   res.send("TEST ROUTE WORKING");
-});
-
-app.put("/puttest", (req, res) => {
-  res.json({
-    message: "PUT is working",
-  });
 });
 
 // ================= DATABASE =================

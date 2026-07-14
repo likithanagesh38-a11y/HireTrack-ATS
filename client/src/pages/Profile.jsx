@@ -293,16 +293,7 @@ function Profile() {
               Upload Resume
 
             </button>
-            {user?.resume && (
-  <a
-    href={`https://hiretrack-ats.onrender.com/${user.resume}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block mt-3 text-blue-600 font-semibold hover:underline"
-  >
-    View Uploaded Resume
-  </a>
-)}
+            
 
           </div>
 
