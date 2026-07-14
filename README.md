@@ -177,7 +177,7 @@ Backend:
 
 # 👩‍💻 Author
 
-**Likitha Nagesh**
+**Likitha Nagesh Moger**
 
 Computer Science Engineering Student
 
