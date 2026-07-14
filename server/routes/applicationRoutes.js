@@ -3,7 +3,6 @@ const router = express.Router();
 
 const Application = require("../models/Application");
 const User = require("../models/User");
-const sendEmail = require("../utils/sendEmail");
 const Job = require("../models/Job");
 
 console.log("APPLICATION ROUTES LOADED");
@@ -45,19 +44,7 @@ const candidateInfo = await User.findById(candidate);
 // Get job details
 const jobInfo = await Job.findById(job);
 
-// Send email
-await sendEmail(
-  candidateInfo.email,
-  "Application Submitted - HireTrack",
-  `Hello ${candidateInfo.name},
-
-Your application for the position of "${jobInfo.title}" at ${jobInfo.company} has been submitted successfully.
-
-Thank you for applying!
-
-Regards,
-HireTrack Team`
-);
+// Email notification disabled
 
 res.status(201).json({
   message: "Application submitted successfully",
@@ -147,42 +134,8 @@ router.put("/status/:id", async (req, res) => {
 
 await application.save();
 
-let subject = "";
-let message = "";
 
-if (status === "Shortlisted") {
-  subject = "Congratulations! You are Shortlisted - HireTrack";
-  message = `Hello ${application.candidate.name},
 
-Congratulations!
-
-You have been shortlisted for the position of "${application.job.title}" at ${application.job.company}.
-
-The recruiter may contact you soon.
-
-Best wishes,
-HireTrack Team`;
-} else if (status === "Rejected") {
-  subject = "Application Update - HireTrack";
-  message = `Hello ${application.candidate.name},
-
-Thank you for applying for "${application.job.title}" at ${application.job.company}.
-
-After careful consideration, we regret to inform you that you were not selected for this position.
-
-We wish you all the best in your future applications.
-
-Regards,
-HireTrack Team`;
-}
-
-if (subject) {
-  await sendEmail(
-    application.candidate.email,
-    subject,
-    message
-  );
-}
 
 res.status(200).json({
   message: "Application status updated successfully",
