@@ -11,8 +11,12 @@ app.use(cors({
   origin: "*"
 }));
 app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+const path = require("path");
 
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "uploads"))
+);
 console.log("Loading auth routes...");
 
 // ================= ROUTES =================

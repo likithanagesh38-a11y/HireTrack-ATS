@@ -1,49 +1,34 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 
+// Create uploads/resume folder if it doesn't exist
+const uploadPath = path.join(__dirname, "../uploads/resume");
+
+if (!fs.existsSync(uploadPath)) {
+  fs.mkdirSync(uploadPath, { recursive: true });
+}
 
 const storage = multer.diskStorage({
-
-  destination: function(req, file, cb) {
-
-    cb(null, "uploads/resume");
-
+  destination: function (req, file, cb) {
+    cb(null, uploadPath);
   },
 
-
-  filename: function(req, file, cb) {
-
-    cb(
-      null,
-      Date.now() + path.extname(file.originalname)
-    );
-
-  }
-
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
 });
-
 
 const upload = multer({
+  storage,
 
-  storage: storage,
-
-  fileFilter: function(req, file, cb) {
-
-
-    if(file.mimetype === "application/pdf") {
-
+  fileFilter: function (req, file, cb) {
+    if (file.mimetype === "application/pdf") {
       cb(null, true);
-
     } else {
-
       cb(new Error("Only PDF files allowed"));
-
     }
-
-
-  }
-
+  },
 });
-
 
 module.exports = upload;
