@@ -375,7 +375,7 @@ const fetchJobs = async () => {
                 {app.candidate.resume && (
   <p className="mt-2">
     <a
-      href={`https://hiretrack-ats.onrender.com/${app.candidate.resume}`}
+      href={`https://hiretrack-ats.onrender.com${app.candidate.resume}`}
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 font-semibold hover:underline"
