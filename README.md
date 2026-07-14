@@ -107,7 +107,7 @@ Each role has a separate dashboard with different functionalities.
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/HireTrack-ATS.git
+git clone https://github.com/likithanagesh38-a11y/HireTrack-ATS.git
 ```
 
 ## Backend Setup
