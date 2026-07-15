@@ -156,7 +156,7 @@ Add screenshots of:
 # 🌐 Live Demo
 
 Frontend:
-(Add your Vercel URL)
+https://hire-track-ats.vercel.app
 
 Backend:
  https://hiretrack-ats.onrender.com
