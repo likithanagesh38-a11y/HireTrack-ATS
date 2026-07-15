@@ -1,67 +1,78 @@
 # 🚀 HireTrack ATS
 
-A full-stack **Applicant Tracking System (ATS)** built using the **MERN Stack**. HireTrack ATS helps recruiters manage job postings and applications while enabling candidates to search and apply for jobs, upload resumes, and track their applications through a secure web platform.
+A full-stack **Applicant Tracking System (ATS)** built using the **MERN Stack**. HireTrack ATS is a recruitment management platform that helps recruiters efficiently manage job postings and applications while allowing candidates to search jobs, apply, upload resumes, and track their application progress through a secure web application.
 
 ---
 
 ## 🌟 Features
 
-### 👨‍💻 Candidate Features
-- User Registration & Login
-- JWT Authentication
-- Candidate Profile Management
-- Browse Available Jobs
-- Search Jobs by Title, Company, and Skills
-- Apply for Jobs
-- Upload Resume (PDF)
-- Track Application Status
-- View Personal Profile
+## 👨‍💻 Candidate Features
 
-### 👩‍💼 Recruiter Features
-- Recruiter Registration & Login
-- Recruiter Dashboard
-- Create Job Postings
-- Edit Job Postings
-- Delete Job Postings
-- View Applicants
-- View Candidate Resumes
-- Shortlist Candidates
-- Reject Candidates
-- Application Statistics Dashboard
+* ✅ User Registration & Login
+* ✅ JWT-based Authentication
+* ✅ Candidate Profile Management
+* ✅ Browse Available Jobs
+* ✅ Search Jobs by:
+
+  * Job Title
+  * Company Name
+  * Required Skills
+* ✅ Apply for Jobs
+* ✅ Upload Resume (PDF)
+* ✅ Track Application Status
+* ✅ View Personal Profile
 
 ---
 
-## 🛠️ Tech Stack
+## 👩‍💼 Recruiter Features
 
-### Frontend
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Tailwind CSS
-- Axios
-- React Router DOM
-- Chart.js
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JWT Authentication
-- Multer
-- Cloudinary
-
-### Deployment
-- Frontend: Vercel
-- Backend: Render
-- Database: MongoDB Atlas
+* ✅ Recruiter Registration & Login
+* ✅ Recruiter Dashboard
+* ✅ Create Job Postings
+* ✅ Edit Job Postings
+* ✅ Delete Job Postings
+* ✅ View Applicants
+* ✅ View Candidate Resumes
+* ✅ Shortlist Candidates
+* ✅ Reject Candidates
+* ✅ Application Statistics Dashboard
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Tech Stack
 
-```text
+## Frontend
+
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Tailwind CSS
+* Axios
+* React Router DOM
+* Chart.js
+
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* JWT Authentication
+* Multer
+* Cloudinary
+
+## Deployment
+
+* Frontend: Vercel
+* Backend: Render
+* Database: MongoDB Atlas
+
+---
+
+# 📂 Project Structure
+
+```
 HireTrack-ATS
 │
 ├── client
@@ -89,48 +100,62 @@ HireTrack-ATS
 
 ---
 
-## 🔐 Authentication
+# 🔐 Authentication & Authorization
 
-HireTrack ATS uses **JWT (JSON Web Token)** for secure authentication and authorization.
+HireTrack ATS uses **JWT (JSON Web Token)** authentication to provide secure login and role-based access control.
 
 ### User Roles
-- Candidate
-- Recruiter
 
-Each role has a dedicated dashboard with role-based access.
+* 👨‍💻 Candidate
+* 👩‍💼 Recruiter
+
+Each user role has a dedicated dashboard with specific permissions and features.
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
-### Clone the Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/likithanagesh38-a11y/HireTrack-ATS.git
+
 cd HireTrack-ATS
 ```
 
 ---
 
-### Backend Setup
+# Backend Setup
+
+Navigate to server folder:
 
 ```bash
 cd server
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-Create a **.env** file inside the **server** folder.
+Create a `.env` file inside the server folder:
 
-```env
+```
 PORT=5000
+
 MONGO_URI=your_mongodb_connection_string
+
 JWT_SECRET=your_secret_key
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
+
 CLOUDINARY_API_KEY=your_api_key
+
 CLOUDINARY_API_SECRET=your_api_secret
 ```
 
-Start the backend:
+Start backend server:
 
 ```bash
 npm start
@@ -138,20 +163,27 @@ npm start
 
 ---
 
-### Frontend Setup
+# Frontend Setup
+
+Open another terminal:
 
 ```bash
 cd client
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-Create a **.env** file inside the **client** folder.
+Create `.env` file:
 
-```env
+```
 VITE_API_URL=https://hiretrack-ats.onrender.com
 ```
 
-Run the frontend:
+Run frontend:
 
 ```bash
 npm run dev
@@ -159,101 +191,124 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
+## 🏠 Home Page
 
-### 🏠 Home Page
+Add screenshot here:
 
-![Home Page](screenshots/home.png)
+```
+screenshots/home.png
+```
+
+## 🔐 Login Page
+
+```
+screenshots/login.png
+```
+
+## 📝 Registration Page
+
+```
+screenshots/register.png
+```
+
+## 👨‍💻 Candidate Dashboard
+
+```
+screenshots/candidate-dashboard.png
+```
+
+## 👩‍💼 Recruiter Dashboard
+
+```
+screenshots/recruiter-dashboard.png
+```
+
+## 👤 Profile Page
+
+```
+screenshots/profile.png
+```
+
+## 💼 Create Job Page
+
+```
+screenshots/create-job.png
+```
+
+## 📋 Applicants Page
+
+```
+screenshots/applicants.png
+```
 
 ---
 
-### 🔐 Login Page
+# 🌐 Live Demo
 
-![Login Page](screenshots/login.png)
+## Frontend
 
----
-
-### 📝 Register Page
-
-![Register Page](screenshots/register.png)
-
----
-
-### 👨‍💻 Candidate Dashboard
-
-![Candidate Dashboard](screenshots/candidate-dashboard.png)
-
----
-
-### 👩‍💼 Recruiter Dashboard
-
-![Recruiter Dashboard](screenshots/recruiter-dashboard.png)
-
----
-
-### 👤 Profile Page
-
-![Profile Page](screenshots/profile.png)
-
----
-
-### 💼 Create Job
-
-![Create Job](screenshots/create-job.png)
----
-
-### 📋 View Applicants
-
-![View Applicants](screenshots/view-applicants.png)
----
-
-## 🌐 Live Demo
-
-### Frontend
 https://hire-track-ats.vercel.app
 
-### Backend API
+## Backend API
+
 https://hiretrack-ats.onrender.com
 
 ---
 
-## 🚀 Future Enhancements
+# 🚀 Future Enhancements
 
-- AI Resume Screening
-- Resume Skill Matching
-- Candidate Ranking System
-- Advanced Recruiter Analytics Dashboard
-- AI Recruitment Assistant
+* 🤖 AI Resume Screening
+* 🎯 Resume Skill Matching
+* 📊 Candidate Ranking System
+* 📈 Advanced Recruiter Analytics Dashboard
+* 🧠 AI Recruitment Assistant
+* 📄 Automated Resume Analysis
+* 📧 Email Notifications for Application Updates
 
 ---
 
-## 👩‍💻 Author
+# 📌 Project Status
+
+✅ Completed
+✅ Deployed
+✅ Portfolio Ready
+🔄 Future AI features planned
+
+---
+
+# 👩‍💻 Author
 
 **Likitha Nagesh Moger**
 
 Computer Science and Engineering Student
 
 ### Skills
-- React.js
-- Node.js
-- Express.js
-- MongoDB
-- JavaScript
-- Python
-- SQL
+
+* React.js
+* Node.js
+* Express.js
+* MongoDB
+* JavaScript
+* Python
+* SQL
+* Git & GitHub
 
 GitHub:
+
 https://github.com/likithanagesh38-a11y
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is developed for educational, learning, and portfolio purposes.
 
 ---
 
-## ⭐ If you like this project
+# ⭐ Support
 
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
+If you find this project useful, consider giving this repository a ⭐ on GitHub.
+
+Thank you for visiting **HireTrack ATS** 🚀
