@@ -191,58 +191,39 @@ npm run dev
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-## 🏠 Home Page
+### 🏠 Home Page
 
-Add screenshot here:
+![Home Page](./screenshots/home.png)
 
-```
-screenshots/home.png
-```
+### 🔐 Login Page
 
-## 🔐 Login Page
+![Login Page](./screenshots/login.png)
 
-```
-screenshots/login.png
-```
+### 📝 Register Page
 
-## 📝 Registration Page
+![Register Page](./screenshots/register.png)
 
-```
-screenshots/register.png
-```
+### 👨‍💻 Candidate Dashboard
 
-## 👨‍💻 Candidate Dashboard
+![Candidate Dashboard](./screenshots/candidate-dashboard.png)
 
-```
-screenshots/candidate-dashboard.png
-```
+### 👩‍💼 Recruiter Dashboard
 
-## 👩‍💼 Recruiter Dashboard
+![Recruiter Dashboard](./screenshots/recruiter-dashboard.png)
 
-```
-screenshots/recruiter-dashboard.png
-```
+### 👤 Profile Page
 
-## 👤 Profile Page
+![Profile Page](./screenshots/profile.png)
 
-```
-screenshots/profile.png
-```
+### 💼 Create Job
 
-## 💼 Create Job Page
+![Create Job](./screenshots/create-job.png)
 
-```
-screenshots/create-job.png
-```
+### 📋 View Applicants
 
-## 📋 Applicants Page
-
-```
-screenshots/applicants.png
-```
-
+![View Applicants](./screenshots/view-applicants.png)
 ---
 
 # 🌐 Live Demo
