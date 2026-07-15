@@ -198,10 +198,9 @@ npm run dev
 
 ---
 
-### 💼 Post Job
+### 💼 Create Job
 
-![Post Job](screenshots/post-job.png)
-
+![Create Job](screenshots/create-job.png)
 ---
 
 ### 📋 View Applicants
