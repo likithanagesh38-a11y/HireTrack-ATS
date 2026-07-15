@@ -102,6 +102,12 @@ router.get("/:recruiterId", async (req, res) => {
     })
       .populate("candidate", "name email resume")
       .populate("job", "title company");
+      console.log(
+  applications.map(app => ({
+    name: app.candidate?.name,
+    resume: app.candidate?.resume
+  }))
+);
 
     res.status(200).json(applications);
 

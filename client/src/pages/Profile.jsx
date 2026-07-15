@@ -30,7 +30,7 @@ function Profile() {
 
 
       const response = await axios.put(
-  `https://hiretrack-ats.onrender.com/api/auth/profile/${user._id}`,
+  `http://localhost:5000/api/auth/profile/${user._id}`,
   {
     name,
     phone,
@@ -107,8 +107,7 @@ function Profile() {
 
 
       const response = await axios.post(
-
-        `https://hiretrack-ats.onrender.com/api/auth/upload-resume/${user._id}`,
+  `http://localhost:5000/api/auth/upload-resume/${user._id}`,
 
         formData,
 

@@ -283,6 +283,7 @@ router.post(
 
 
     try{
+      console.log("REQ.FILE:", req.file);
 
 
       if(!req.file){
@@ -296,32 +297,20 @@ router.post(
 
 
       }
+      console.log("Cloudinary response:", req.file);
+console.log("Path:", req.file.path);
+console.log("Secure URL:", req.file.secure_url);
+const user = await User.findByIdAndUpdate(
+  req.params.id,
+  {
+    resume: req.file.secure_url || req.file.path,
+  },
+  {
+    new: true,
+  }
+);
 
-
-
-      const user =
-        await User.findByIdAndUpdate(
-
-
-          req.params.id,
-
-
-          {
-
-            resume: req.file.secure_url
-
-          },
-
-
-          {
-
-            new:true
-
-          }
-
-
-        );
-
+console.log("UPDATED USER:", user);
 
 
       if(!user){

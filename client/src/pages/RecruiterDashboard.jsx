@@ -89,6 +89,9 @@ const fetchApplications = async () => {
 );
 
     setApplications(response.data);
+    response.data.forEach((app, index) => {
+  console.log(index, app.candidate);
+});
 
     setStats((prev)=>({
       ...prev,
@@ -375,7 +378,7 @@ const fetchJobs = async () => {
                 {app.candidate.resume && (
   <p className="mt-2">
     <a
-      href={`https://hiretrack-ats.onrender.com${app.candidate.resume}`}
+      href={app.candidate.resume}
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 font-semibold hover:underline"

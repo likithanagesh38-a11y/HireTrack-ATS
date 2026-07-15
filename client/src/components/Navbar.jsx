@@ -21,7 +21,6 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center gap-6">
-
         <Link
           to="/"
           className="hover:text-gray-200 transition"
@@ -29,6 +28,7 @@ function Navbar() {
           Home
         </Link>
 
+        {/* Candidate Dashboard */}
         {user?.role === "Candidate" && (
           <Link
             to="/candidate-dashboard"
@@ -38,6 +38,7 @@ function Navbar() {
           </Link>
         )}
 
+        {/* Recruiter Dashboard */}
         {user?.role === "Recruiter" && (
           <Link
             to="/recruiter-dashboard"
@@ -47,7 +48,7 @@ function Navbar() {
           </Link>
         )}
 
-        {user && (
+        {user ? (
           <>
             <Link
               to="/profile"
@@ -63,8 +64,23 @@ function Navbar() {
               Logout
             </button>
           </>
-        )}
+        ) : (
+          <>
+            <Link
+              to="/login"
+              className="hover:text-gray-200 transition"
+            >
+              Login
+            </Link>
 
+            <Link
+              to="/register"
+              className="hover:text-gray-200 transition"
+            >
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );
