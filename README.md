@@ -14,6 +14,7 @@ A full-stack **Applicant Tracking System (ATS)** built using the **MERN Stack**.
 - Search Jobs by Title, Company, and Skills
 - Apply for Jobs
 - Upload Resume (PDF)
+- Track Application Status
 - View Personal Profile
 
 ### 👩‍💼 Recruiter Features
