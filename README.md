@@ -161,17 +161,53 @@ npm run dev
 
 ## 📸 Screenshots
 
-Add screenshots of the following pages:
+## 📸 Screenshots
 
-- 🏠 Home Page
-- 🔐 Login Page
-- 📝 Register Page
-- 👨‍💻 Candidate Dashboard
-- 👩‍💼 Recruiter Dashboard
-- 👤 Profile Page
-- 📄 Job Posting Page
-- 📋 View Applicants Page
+### 🏠 Home Page
 
+![Home Page](screenshots/home.png)
+
+---
+
+### 🔐 Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+### 📝 Register Page
+
+![Register Page](screenshots/register.png)
+
+---
+
+### 👨‍💻 Candidate Dashboard
+
+![Candidate Dashboard](screenshots/candidate-dashboard.png)
+
+---
+
+### 👩‍💼 Recruiter Dashboard
+
+![Recruiter Dashboard](screenshots/recruiter-dashboard.png)
+
+---
+
+### 👤 Profile Page
+
+![Profile Page](screenshots/profile.png)
+
+---
+
+### 💼 Post Job
+
+![Post Job](screenshots/post-job.png)
+
+---
+
+### 📋 View Applicants
+
+![View Applicants](screenshots/view-applicants.png)
 ---
 
 ## 🌐 Live Demo
